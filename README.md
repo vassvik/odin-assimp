@@ -1,6 +1,6 @@
 # odin-assimp
 
-With a dev console (x64 Native Tools Command Prompt for VS 2017), with `git`
+With a dev console (x64 Native Tools Command Prompt for VS 2017), with `git` in PATH
 ```
 build_assimp.bat
 build_lib.bat
