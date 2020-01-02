@@ -15,3 +15,4 @@ Run `meshloader.odin` to test when built successfully.
 
 **Warning:** Only loads vertices and vertex indices from either an .obj or .fbx file. If you need more it should be simple to modify the wrapper in `src/meshloaded_lib.cpp` to account for it during mesh traversal.
 
+Also see [https://github.com/DrProfesor/odin-assimp](this link) for an incomplete Odin binding to the C-API of Assimp.
