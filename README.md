@@ -1,23 +1,17 @@
 # odin-assimp
 
-With a dev console (x64 Native Tools Command Prompt for VS 2017), with `git` in PATH
+This is a sanitized C wrapper around basic Assimp functionality in addition to Odin bindings to this wrapper. These bindings accept Odin slices, but the data will be allocated by the wrapper library and need to be manually freed by it.
+
+With a dev console (x64 Native Tools Command Prompt for VS 2017), with `git` and `cmake` in your system PATH
 ```
-build_assimp.bat
+cd scripts
+get_assimp.bat
 build_lib.bat
 ```
-then run `main.odin`. Depends on [odin-glfw](https://github.com/vassvik/odin-glfw), [odin-gl](https://github.com/vassvik/odin-gl) and [odin-gl_font](https://github.com/vassvik/odin-gl_font) (which depends on [odin-stb](https://github.com/vassvik/odin-stb)) (all a bit out of date, probably). 
 
-Models paths are hard coded. 
+This will build Assimp in Release mode with all importers and exporters explicitly disabled, and only OBJ and FBX importers enabled. For other setups and formats, simply modify `get_assimp.bat`.
 
-Left and right keys to change models. 
+Run `meshloader.odin` to test when built successfully.
 
-Ctrl, Shift and Alt to change camera speed. 
-
-WASD to move camera. Left click and move to pivot.
-
-Press B to show bounding box. 
-
-
-
-
+**Warning:** Only loads vertices and vertex indices from either an .obj or .fbx file. If you need more it should be simple to modify the wrapper in `src/meshloaded_lib.cpp` to account for it during mesh traversal.
 
